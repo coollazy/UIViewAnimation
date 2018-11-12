@@ -1,0 +1,16 @@
+PODS:
+  - UIViewAnimation (1.0.0)
+
+DEPENDENCIES:
+  - UIViewAnimation (from `.`)
+
+EXTERNAL SOURCES:
+  UIViewAnimation:
+    :path: "."
+
+SPEC CHECKSUMS:
+  UIViewAnimation: 5087fc36a6bc3427386b9719fda87e1ea724a612
+
+PODFILE CHECKSUM: 9067b9a8d9ebd13f45a46dd6e6ecdd525397d999
+
+COCOAPODS: 1.5.3
