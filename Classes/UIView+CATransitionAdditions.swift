@@ -1,13 +1,15 @@
 //
 //  UIView+CATransitionAdditions.swift
-//  ActionSheetPicker-3.0
 //
-//  Created by TWDT037 on 2018/4/9.
+//  Created by ven.wu
+//  Copyright © 2018年 ven1984. All rights reserved.
 //
 
 import UIKit
 
-fileprivate let kViewAnimationDefaultDuration:TimeInterval = 0.3
+extension TimeInterval {
+    static let viewAminationDefaultDuration = 0.3
+}
 
 extension CATransitionType {
     static let cube = CATransitionType(rawValue: "cube")
@@ -18,14 +20,14 @@ extension CATransitionType {
 
 // MARK: - Animation private method
 extension UIView {
-    fileprivate func animation(duration:TimeInterval, type:CATransitionType, subType:CATransitionSubtype? = nil, timingFunationName:CAMediaTimingFunctionName = .linear, fillMode:CAMediaTimingFillMode = .forwards) {
+    fileprivate func animation(duration:TimeInterval, type:CATransitionType, subType:CATransitionSubtype? = nil, timingFunationName:CAMediaTimingFunctionName = .linear, fillMode:CAMediaTimingFillMode = .forwards, isRemovingOnCompletion: Bool = true) {
         let animation:CATransition = CATransition()
         animation.duration = duration
         animation.type = type
         animation.subtype = subType
         animation.timingFunction = CAMediaTimingFunction(name: timingFunationName)
         animation.fillMode = fillMode
-        animation.isRemovedOnCompletion = true
+        animation.isRemovedOnCompletion = isRemovingOnCompletion
         layer.add(animation, forKey: "animation")
     }
 }
@@ -33,11 +35,11 @@ extension UIView {
 // MARK: - Fade In Out
 extension UIView {
     @objc public func animationFadeIn() {
-        animation(duration: kViewAnimationDefaultDuration, type: .fade, fillMode:.forwards)
+        animation(duration: .viewAminationDefaultDuration, type: .fade, fillMode:.forwards)
     }
     
     @objc public func animationFadeOut() {
-        animation(duration: kViewAnimationDefaultDuration, type: .fade, fillMode: .backwards)
+        animation(duration: .viewAminationDefaultDuration, type: .fade, fillMode: .backwards)
     }
 }
 
@@ -48,19 +50,19 @@ extension UIView {
     }
     
     @objc public func animationMoveInFromTop() {
-        animationMoveIn(duration: kViewAnimationDefaultDuration, subType: .fromBottom)
+        animationMoveIn(duration: .viewAminationDefaultDuration, subType: .fromBottom)
     }
     
     @objc public func animationMoveInFromBottom() {
-        animationMoveIn(duration: kViewAnimationDefaultDuration, subType: .fromTop)
+        animationMoveIn(duration: .viewAminationDefaultDuration, subType: .fromTop)
     }
     
     @objc public func animationMoveInFromLeft() {
-        animationMoveIn(duration: kViewAnimationDefaultDuration, subType: .fromLeft)
+        animationMoveIn(duration: .viewAminationDefaultDuration, subType: .fromLeft)
     }
     
     @objc public func animationMoveInFromRight() {
-        animationMoveIn(duration: kViewAnimationDefaultDuration, subType: .fromRight)
+        animationMoveIn(duration: .viewAminationDefaultDuration, subType: .fromRight)
     }
 }
 
@@ -71,19 +73,19 @@ extension UIView {
     }
     
     @objc public func animationPushFromTop() {
-        animationPush(duration: kViewAnimationDefaultDuration, subType: .fromBottom)
+        animationPush(duration: .viewAminationDefaultDuration, subType: .fromBottom)
     }
     
     @objc public func animationPushFromBottom() {
-        animationPush(duration: kViewAnimationDefaultDuration, subType: .fromTop)
+        animationPush(duration: .viewAminationDefaultDuration, subType: .fromTop)
     }
     
     @objc public func animationPushFromLeft() {
-        animationPush(duration: kViewAnimationDefaultDuration, subType: .fromLeft)
+        animationPush(duration: .viewAminationDefaultDuration, subType: .fromLeft)
     }
     
     @objc public func animationPushFromRight() {
-        animationPush(duration: kViewAnimationDefaultDuration, subType: .fromRight)
+        animationPush(duration: .viewAminationDefaultDuration, subType: .fromRight)
     }
 }
 
@@ -94,19 +96,19 @@ extension UIView {
     }
     
     @objc public func animationRevealFromTop() {
-        animationReveal(duration: kViewAnimationDefaultDuration, subType: .fromBottom)
+        animationReveal(duration: .viewAminationDefaultDuration, subType: .fromBottom)
     }
     
     @objc public func animationRevealFromBottom() {
-        animationReveal(duration: kViewAnimationDefaultDuration, subType: .fromTop)
+        animationReveal(duration: .viewAminationDefaultDuration, subType: .fromTop)
     }
     
     @objc public func animationRevealFromLeft() {
-        animationReveal(duration: kViewAnimationDefaultDuration, subType: .fromLeft)
+        animationReveal(duration: .viewAminationDefaultDuration, subType: .fromLeft)
     }
     
     @objc public func animationRevealFromRight() {
-        animationReveal(duration: kViewAnimationDefaultDuration, subType: .fromRight)
+        animationReveal(duration: .viewAminationDefaultDuration, subType: .fromRight)
     }
 }
 
@@ -117,19 +119,19 @@ extension UIView {
     }
     
     @objc public func animationCubeFromTop() {
-        animationCube(duration: kViewAnimationDefaultDuration, subType: .fromBottom)
+        animationCube(duration: .viewAminationDefaultDuration, subType: .fromBottom)
     }
     
     @objc public func animationCubeFromBottom() {
-        animationCube(duration: kViewAnimationDefaultDuration, subType: .fromTop)
+        animationCube(duration: .viewAminationDefaultDuration, subType: .fromTop)
     }
     
     @objc public func animationCubeFromLeft() {
-        animationCube(duration: kViewAnimationDefaultDuration, subType: .fromLeft)
+        animationCube(duration: .viewAminationDefaultDuration, subType: .fromLeft)
     }
     
     @objc public func animationCubeFromRight() {
-        animationCube(duration: kViewAnimationDefaultDuration, subType: .fromRight)
+        animationCube(duration: .viewAminationDefaultDuration, subType: .fromRight)
     }
 }
 
@@ -140,19 +142,19 @@ extension UIView {
     }
     
     @objc public func animationFlipFromTop() {
-        animationFlip(duration: kViewAnimationDefaultDuration, subType: .fromBottom)
+        animationFlip(duration: .viewAminationDefaultDuration, subType: .fromBottom)
     }
     
     @objc public func animationFlipFromBottom() {
-        animationFlip(duration: kViewAnimationDefaultDuration, subType: .fromTop)
+        animationFlip(duration: .viewAminationDefaultDuration, subType: .fromTop)
     }
     
     @objc public func animationFlipFromLeft() {
-        animationFlip(duration: kViewAnimationDefaultDuration, subType: .fromLeft)
+        animationFlip(duration: .viewAminationDefaultDuration, subType: .fromLeft)
     }
     
     @objc public func animationFlipFromRight() {
-        animationFlip(duration: kViewAnimationDefaultDuration, subType: .fromRight)
+        animationFlip(duration: .viewAminationDefaultDuration, subType: .fromRight)
     }
 }
 
@@ -163,19 +165,19 @@ extension UIView {
     }
     
     @objc public func animationRotateFromTop() {
-        animationRotate(duration: kViewAnimationDefaultDuration, subType: .fromBottom)
+        animationRotate(duration: .viewAminationDefaultDuration, subType: .fromBottom)
     }
     
     @objc public func animationRotateFromBottom() {
-        animationRotate(duration: kViewAnimationDefaultDuration, subType: .fromTop)
+        animationRotate(duration: .viewAminationDefaultDuration, subType: .fromTop)
     }
     
     @objc public func animationRotateFromLeft() {
-        animationRotate(duration: kViewAnimationDefaultDuration, subType: .fromLeft)
+        animationRotate(duration: .viewAminationDefaultDuration, subType: .fromLeft)
     }
     
     @objc public func animationRotateFromRight() {
-        animationRotate(duration: kViewAnimationDefaultDuration, subType: .fromRight)
+        animationRotate(duration: .viewAminationDefaultDuration, subType: .fromRight)
     }
 }
 
@@ -186,18 +188,18 @@ extension UIView {
     }
     
     @objc public func animationPageCurlFromTop() {
-        animationPageCurl(duration: kViewAnimationDefaultDuration, subType: .fromBottom)
+        animationPageCurl(duration: .viewAminationDefaultDuration, subType: .fromBottom)
     }
     
     @objc public func animationPageCurlFromBottom() {
-        animationPageCurl(duration: kViewAnimationDefaultDuration, subType: .fromTop)
+        animationPageCurl(duration: .viewAminationDefaultDuration, subType: .fromTop)
     }
     
     @objc public func animationPageCurlFromLeft() {
-        animationPageCurl(duration: kViewAnimationDefaultDuration, subType: .fromLeft)
+        animationPageCurl(duration: .viewAminationDefaultDuration, subType: .fromLeft)
     }
     
     @objc public func animationPageCurlFromRight() {
-        animationPageCurl(duration: kViewAnimationDefaultDuration, subType: .fromRight)
+        animationPageCurl(duration: .viewAminationDefaultDuration, subType: .fromRight)
     }
 }
