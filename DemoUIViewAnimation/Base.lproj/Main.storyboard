@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DemoUIViewAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zT6-6T-zU9">
+                                <rect key="frame" x="169" y="40" width="37" height="30"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Cube">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="selected" title="Reset">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cubeButtonClickedHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6kY-tM-Wtn"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y3z-k2-UGC">
+                                <rect key="frame" x="87.5" y="85" width="200" height="60"/>
+                                <color key="backgroundColor" red="0.33712673910854885" green="0.45905625440072684" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="1Fx-Wt-hxz"/>
+                                    <constraint firstAttribute="width" constant="200" id="254-pI-b9k"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DN-Ye-eMh">
+                                <rect key="frame" x="172.5" y="160" width="30" height="30"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Flip">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="selected" title="Reset">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="flipButtonClickedHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PwS-m5-TYx"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKc-Iv-pKM">
+                                <rect key="frame" x="87.5" y="205" width="200" height="60"/>
+                                <color key="backgroundColor" red="0.33712673910000002" green="0.45905625439999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="6OA-6I-X2a"/>
+                                    <constraint firstAttribute="height" constant="60" id="v7v-Sx-ANY"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fen-0q-Ngx">
+                                <rect key="frame" x="165" y="280" width="45" height="30"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Rotate">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="selected" title="Reset">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="rotateButtonClickedHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NO4-XD-LvG"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XIZ-ln-2wc">
+                                <rect key="frame" x="87.5" y="325" width="200" height="60"/>
+                                <color key="backgroundColor" red="0.33712673910000002" green="0.45905625439999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="79f-Oi-b4C"/>
+                                    <constraint firstAttribute="height" constant="60" id="DBK-VQ-az9"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEh-k2-aY0">
+                                <rect key="frame" x="154" y="400" width="67" height="30"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Page Curl">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="selected" title="Reset">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pageCurlButtonClickedHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zWy-gS-B8b"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAc-Am-1zP">
+                                <rect key="frame" x="87.5" y="445" width="200" height="60"/>
+                                <color key="backgroundColor" red="0.33712673910000002" green="0.45905625439999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="EVO-k3-csk"/>
+                                    <constraint firstAttribute="width" constant="200" id="QjH-Hv-MAn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bAc-Am-1zP" firstAttribute="top" secondItem="lEh-k2-aY0" secondAttribute="bottom" constant="15" id="6qj-H9-9LA"/>
+                            <constraint firstItem="3DN-Ye-eMh" firstAttribute="top" secondItem="Y3z-k2-UGC" secondAttribute="bottom" constant="15" id="9HW-cb-ygi"/>
+                            <constraint firstItem="zT6-6T-zU9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FES-yP-7ZY"/>
+                            <constraint firstItem="zT6-6T-zU9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Hhp-oS-xqQ"/>
+                            <constraint firstItem="fen-0q-Ngx" firstAttribute="top" secondItem="RKc-Iv-pKM" secondAttribute="bottom" constant="15" id="LiC-oT-c2e"/>
+                            <constraint firstItem="Y3z-k2-UGC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PAJ-1O-sKe"/>
+                            <constraint firstItem="3DN-Ye-eMh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SHY-ZR-miw"/>
+                            <constraint firstItem="lEh-k2-aY0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TFd-6j-eZJ"/>
+                            <constraint firstItem="fen-0q-Ngx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TJb-rP-OWA"/>
+                            <constraint firstItem="XIZ-ln-2wc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZdP-QQ-pEQ"/>
+                            <constraint firstItem="lEh-k2-aY0" firstAttribute="top" secondItem="XIZ-ln-2wc" secondAttribute="bottom" constant="15" id="b0V-ie-XwH"/>
+                            <constraint firstItem="RKc-Iv-pKM" firstAttribute="top" secondItem="3DN-Ye-eMh" secondAttribute="bottom" constant="15" id="c5f-8m-0Xw"/>
+                            <constraint firstItem="Y3z-k2-UGC" firstAttribute="top" secondItem="zT6-6T-zU9" secondAttribute="bottom" constant="15" id="e16-Cw-gPl"/>
+                            <constraint firstItem="bAc-Am-1zP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eHj-cd-pNS"/>
+                            <constraint firstItem="RKc-Iv-pKM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s79-G5-JtA"/>
+                            <constraint firstItem="XIZ-ln-2wc" firstAttribute="top" secondItem="fen-0q-Ngx" secondAttribute="bottom" constant="15" id="wsQ-sz-2Q9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cubeView" destination="Y3z-k2-UGC" id="RqX-jv-3ZJ"/>
+                        <outlet property="flipView" destination="RKc-Iv-pKM" id="4Li-FT-dxD"/>
+                        <outlet property="pageCurlView" destination="bAc-Am-1zP" id="z7u-B9-zoe"/>
+                        <outlet property="rotateView" destination="XIZ-ln-2wc" id="uac-Gk-oDM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
