@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '9.0'
+platform :ios, '10.0'
 
 use_frameworks!
 
@@ -10,4 +10,9 @@ target 'DemoUIViewAnimation' do
   # use_frameworks!
   
     pod 'UIViewAnimation', :path => "."
+    pod 'RxSwift', '~> 5'
+    pod 'RxCocoa', '~> 5'
+    pod 'RxDataSources', '~> 4.0.1'
+    pod 'LZFluent', '~> 1.0.0'
+    pod 'LZUIKit', '~> 1.1.1'
 end

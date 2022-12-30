@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,11 @@
 		C822640F21998F7400E5FFDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C822640D21998F7400E5FFDF /* Main.storyboard */; };
 		C822641121998F7500E5FFDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C822641021998F7500E5FFDF /* Assets.xcassets */; };
 		C822641421998F7500E5FFDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C822641221998F7500E5FFDF /* LaunchScreen.storyboard */; };
+		CEDCB4EC295DA65A003AD7DA /* AnimationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCB4EA295DA659003AD7DA /* AnimationCell.swift */; };
+		CEDCB4ED295DA65A003AD7DA /* AnimationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDCB4EB295DA659003AD7DA /* AnimationCell.xib */; };
+		CEDCB4F3295DA8A6003AD7DA /* AnimationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCB4F2295DA8A6003AD7DA /* AnimationItem.swift */; };
+		CEDCB4F5295DA8DC003AD7DA /* AnimationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCB4F4295DA8DC003AD7DA /* AnimationViewModel.swift */; };
+		CEDCB4F8295DA90B003AD7DA /* AnimationCell+AnimationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCB4F7295DA90B003AD7DA /* AnimationCell+AnimationItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +32,11 @@
 		C822641021998F7500E5FFDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C822641321998F7500E5FFDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C822641521998F7500E5FFDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEDCB4EA295DA659003AD7DA /* AnimationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCell.swift; sourceTree = "<group>"; };
+		CEDCB4EB295DA659003AD7DA /* AnimationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimationCell.xib; sourceTree = "<group>"; };
+		CEDCB4F2295DA8A6003AD7DA /* AnimationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationItem.swift; sourceTree = "<group>"; };
+		CEDCB4F4295DA8DC003AD7DA /* AnimationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewModel.swift; sourceTree = "<group>"; };
+		CEDCB4F7295DA90B003AD7DA /* AnimationCell+AnimationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimationCell+AnimationItem.swift"; sourceTree = "<group>"; };
 		F96E2CB5CA88D0E184CD9A85 /* Pods-UIViewAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIViewAnimation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIViewAnimation/Pods-UIViewAnimation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +84,7 @@
 		C822640821998F7400E5FFDF /* DemoUIViewAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				CEDCB4EE295DA878003AD7DA /* Animation */,
 				C822640921998F7400E5FFDF /* AppDelegate.swift */,
 				C822640B21998F7400E5FFDF /* ViewController.swift */,
 				C822640D21998F7400E5FFDF /* Main.storyboard */,
@@ -82,6 +93,50 @@
 				C822641521998F7500E5FFDF /* Info.plist */,
 			);
 			path = DemoUIViewAnimation;
+			sourceTree = "<group>";
+		};
+		CEDCB4EE295DA878003AD7DA /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				CEDCB4F6295DA8F7003AD7DA /* Extensions */,
+				CEDCB4EF295DA880003AD7DA /* Models */,
+				CEDCB4F1295DA895003AD7DA /* ViewModels */,
+				CEDCB4F0295DA889003AD7DA /* Views */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		CEDCB4EF295DA880003AD7DA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEDCB4F2295DA8A6003AD7DA /* AnimationItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEDCB4F0295DA889003AD7DA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEDCB4EA295DA659003AD7DA /* AnimationCell.swift */,
+				CEDCB4EB295DA659003AD7DA /* AnimationCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEDCB4F1295DA895003AD7DA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CEDCB4F4295DA8DC003AD7DA /* AnimationViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CEDCB4F6295DA8F7003AD7DA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CEDCB4F7295DA90B003AD7DA /* AnimationCell+AnimationItem.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D1911B7FE6EE2FFF83D0E199 /* Frameworks */ = {
@@ -126,6 +181,7 @@
 				TargetAttributes = {
 					C822640521998F7400E5FFDF = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1300;
 					};
 				};
 			};
@@ -154,6 +210,7 @@
 			files = (
 				C822641421998F7500E5FFDF /* LaunchScreen.storyboard in Resources */,
 				C822641121998F7500E5FFDF /* Assets.xcassets in Resources */,
+				CEDCB4ED295DA65A003AD7DA /* AnimationCell.xib in Resources */,
 				C822640F21998F7400E5FFDF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,17 +223,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DemoUIViewAnimation/Pods-DemoUIViewAnimation-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/UIViewAnimation/UIViewAnimation.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DemoUIViewAnimation/Pods-DemoUIViewAnimation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIViewAnimation.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DemoUIViewAnimation/Pods-DemoUIViewAnimation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoUIViewAnimation/Pods-DemoUIViewAnimation-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DemoUIViewAnimation/Pods-DemoUIViewAnimation-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		41D945CA81C35E3BA48A74C2 /* [CP] Check Pods Manifest.lock */ = {
@@ -204,7 +260,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDCB4EC295DA65A003AD7DA /* AnimationCell.swift in Sources */,
 				C822640C21998F7400E5FFDF /* ViewController.swift in Sources */,
+				CEDCB4F3295DA8A6003AD7DA /* AnimationItem.swift in Sources */,
+				CEDCB4F5295DA8DC003AD7DA /* AnimationViewModel.swift in Sources */,
+				CEDCB4F8295DA90B003AD7DA /* AnimationCell+AnimationItem.swift in Sources */,
 				C822640A21998F7400E5FFDF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,7 +342,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -337,7 +397,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -355,14 +415,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DemoUIViewAnimation/Info.plist;
 				INSTALL_OWNER = ven.wu;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ven1984.UIViewAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -375,14 +435,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DemoUIViewAnimation/Info.plist;
 				INSTALL_OWNER = ven.wu;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ven1984.UIViewAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
