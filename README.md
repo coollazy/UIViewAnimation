@@ -13,20 +13,31 @@ CocoaPods
 use_frameworks!
 
 target 'YOUR_TARGET_NAME' do
-    pod 'UIViewAnimation', '~> 1.0.0'
+    pod 'UIViewAnimation', '~> 2.0.0'
 end
 ```
 
-## Examples
+## How to use
+
+- Import the UIViewAnimation in the file
 
 ```swift
-	cubeView.animationCubeFromTop()
+	import UIViewAnimation
+```
+
+- Use the view instance to execute the animation method
+
+```swift
+	let view = UIView()
 	
-	flipView.animationFlipFromRight()
+	// Call the animation you want as below
+	view.animationFlipFromRight()
 	
-	rotateView.animationRotateFromBottom()
+	view.animationPageCurl()
 	
-	pageCurlView.animationPageCurlFromLeft()
+	view.animationCubeFromTop()
+	
+	view.animationRotate()
 ```
 
 ![](./Resources/demo.gif)
