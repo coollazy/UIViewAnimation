@@ -13,7 +13,11 @@ class AnimationCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        setBackgroundColor(.systemTeal)
+        setBackgroundColor(.clear)
+        
+        contentView
+            .setBackgroundColor(.white)
+            .setCornerLength(10)
         
         titleLabel
             .setTextColor(.darkGray)
@@ -27,7 +31,7 @@ class AnimationCell: UICollectionViewCell {
             .setTitleColor(.white)
             .setFontSize(10)
             .setFontWeight(.bold)
-            .setBackgroundColor(.darkGray)
+            .setBackgroundColor(.gray)
             .setCornerLength(5)
         
         animatedButton.rx.tap
