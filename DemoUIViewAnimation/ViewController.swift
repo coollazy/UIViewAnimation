@@ -2,6 +2,7 @@ import UIKit
 import UIViewAnimation
 import RxSwift
 import RxDataSources
+import LZFluent
 
 class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
@@ -11,7 +12,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .lightGray
+        view.setBackgroundColor(.lightGray)
+        
         initializeCollectionView()
         binding()
     }
@@ -23,10 +25,11 @@ class ViewController: UIViewController {
     }
     
     private func initializeCollectionView() {
-        collectionView.backgroundColor = .lightGray
-        collectionView.register(.init(nibName: "AnimationCell", bundle: nil), forCellWithReuseIdentifier: "AnimationCell")
-        collectionView.collectionViewLayout = UICollectionViewFlowLayout()
-        collectionView.delegate = self
+        collectionView
+            .setBackgroundColor(.lightGray)
+            .setRegister(.init(nibName: "AnimationCell", bundle: nil), forCellWithReuseIdentifier: "AnimationCell")
+            .setCollectionViewLayout(UICollectionViewFlowLayout())
+            .setDelegate(self)
     }
     
     private func binding() {

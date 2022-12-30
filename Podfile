@@ -13,6 +13,6 @@ target 'DemoUIViewAnimation' do
     pod 'RxSwift', '~> 5'
     pod 'RxCocoa', '~> 5'
     pod 'RxDataSources', '~> 4.0.1'
-    pod 'LZFluent', '~> 1.0.0'
+    pod 'LZFluent', '~> 1.0.4'
     pod 'LZUIKit', '~> 1.1.1'
 end
