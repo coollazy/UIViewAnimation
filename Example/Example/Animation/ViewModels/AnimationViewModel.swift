@@ -34,7 +34,7 @@ class AnimationViewModel {
                     AnimationItem(title: "PageCurl"),
                 ]
             })
-            .observeOn(MainScheduler.instance)
+            .observe(on: MainScheduler.instance)
             .share()
     }
 }
