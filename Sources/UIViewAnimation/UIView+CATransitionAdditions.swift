@@ -1,10 +1,3 @@
-//
-//  UIView+CATransitionAdditions.swift
-//
-//  Created by ven.wu
-//  Copyright © 2018年 ven1984. All rights reserved.
-//
-
 import UIKit
 
 extension TimeInterval {
